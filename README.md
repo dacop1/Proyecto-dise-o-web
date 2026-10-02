@@ -1,4 +1,3 @@
-# Proyecto-dise-o-web
 
 # 🏛️️ Sabor con Historia
 
@@ -8,7 +7,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Design-Mobile--First-brightgreen?style=for-the-badge](https://img.shields.io/badge/UX%2FUI-Mobile--First-orange?style=for-the-badge)
-![WCAG-AA-blue?style=for-the-badge](https://img.shields.io/badge/Accesibilidad-WCAG%202.2%20AA-blue?style=for-the-badge)
 
 ---
 
