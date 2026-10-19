@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SITEMAP XML de "Sabor con historia"
+  Para qué sirve: es un archivo para los buscadores (Google, Bing...),
+  no para las personas. Les dice qué páginas existen y cuáles son
+  más importantes. El equivalente para personas es mapa-del-sitio.html.
+
+  Dónde colocarlo: en la raíz del sitio (https://localhost/sitemap.xml)
+  y, cuando haya dominio real, indicarlo en robots.txt con la línea:
+  Sitemap: https://TU-DOMINIO/sitemap.xml
+
+  Cambios respecto al borrador original:
+  1. Las rutas usaban barra invertida (\) y espacios ("Fase 3\system").
+     En una URL se usa siempre barra normal (/) y sin espacios.
+  2. El formato de lastmod era inválido (2026-10-16-T14:29:30...):
+     sobraba un guion antes de la T. El correcto es 2026-10-16T14:29:30+02:00.
+  3. Había solo dos URL con prioridad 1 y frecuencia "daily". Si todo es
+     prioritario, nada lo es. Ahora hay una jerarquía real.
+  4. Se listan las páginas reales del sitio, no carpetas de fases.
+  5. Se añade el atributo xsi:schemaLocation para poder validar el archivo.
+
+  Reglas del protocolo (sitemaps.org):
+  - El archivo debe ir en UTF-8 y con las etiquetas bien cerradas.
+  - Solo <loc> es obligatoria. lastmod, changefreq y priority son opcionales.
+  - Todas las URL deben ser absolutas y del mismo dominio que el sitemap.
+  - Máximo 50.000 URL o 50 MB por archivo.
+  - Los caracteres &, <, > y comillas dentro de una URL deben escaparse.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!--
+    Etiquetas de cada bloque <url>:
+    <loc>        Dirección completa de la página (obligatoria).
+    <lastmod>    Última modificación, formato AAAA-MM-DDThh:mm:ss+zona.
+    <changefreq> Cada cuánto cambia el contenido (pista, no orden).
+    <priority>   De 0.0 a 1.0: importancia RELATIVA dentro de este sitio.
+                 Por defecto es 0.5.
+  -->
+
+  <!-- ============ NIVEL 1: página principal ============ -->
+  <url>
+    <loc>https://localhost/index.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ============ NIVEL 2: secciones principales ============ -->
+  <!-- La carta cambia con frecuencia (platos de temporada, precios). -->
+  <url>
+    <loc>https://localhost/carta.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Reservas es la página que genera negocio: prioridad alta. -->
+  <url>
+    <loc>https://localhost/reservas.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- El Pósito es lo que diferencia al proyecto: contenido estable. -->
+  <url>
+    <loc>https://localhost/posito.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://localhost/contacto.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============ NIVEL 3: subsecciones de la carta ============ -->
+  <url>
+    <loc>https://localhost/carta-entrantes.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://localhost/carta-principales.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://localhost/carta-postres.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://localhost/carta-bebidas.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============ NIVEL 3: subsecciones de reservas ============ -->
+  <url>
+    <loc>https://localhost/reservas-grupos.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://localhost/reservas-gestionar.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- ============ NIVEL 3: subsecciones del Pósito ============ -->
+  <url>
+    <loc>https://localhost/posito-historia.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://localhost/posito-evolucion.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://localhost/posito-galeria.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============ NIVEL 3: contacto ============ -->
+  <url>
+    <loc>https://localhost/contacto-ubicacion.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!--
+    ============ PÁGINAS LEGALES Y AUXILIARES ============
+    Deben existir y poder encontrarse, pero no compiten por posicionarse:
+    prioridad baja y cambios muy raros.
+  -->
+  <url>
+    <loc>https://localhost/informacion-legal.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://localhost/aviso-legal.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://localhost/privacidad.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://localhost/cookies.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://localhost/accesibilidad.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- El mapa HTML ayuda a las personas; aquí se incluye con prioridad baja. -->
+  <url>
+    <loc>https://localhost/mapa-del-sitio.html</loc>
+    <lastmod>2026-10-16T14:29:30+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
