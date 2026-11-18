@@ -1,0 +1,132 @@
+/* ==========================================================
+   Sabor con historia - Hoja de estilos externa principal
+   Propuesta 1: tema CLARO (tonos cálidos, crema y terracota)
+   Unidades en px; Flexbox solo en los menús (nav y ul)
+   ========================================================== */
+
+/* ---------- Base ---------- */
+body {
+    font-family: Inter, Roboto, "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #FBF5E9;
+    color: #3B2A20;
+    margin: 0;
+}
+
+/* ---------- Estructura ---------- */
+header,
+footer {
+    background-color: #EFE3CC;
+    padding: 16px 32px;
+}
+
+header {
+    border-bottom: 3px solid #7A2E1D;
+}
+
+footer {
+    border-top: 3px solid #7A2E1D;
+    margin-top: 48px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 32px;
+}
+
+/* ---------- Títulos ---------- */
+h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    color: #7A2E1D;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #7A2E1D;
+    border-bottom: 2px solid #C9A66B;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #5A3A25;
+}
+
+/* ---------- Texto y enlaces ---------- */
+p {
+    font-size: 16px;
+    margin: 8px 0 16px 0;
+}
+
+a {
+    color: #7A2E1D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #C9A66B;
+}
+
+/* ---------- Menús con Flexbox ---------- */
+/* nav: marca a la izquierda y menú a la derecha */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ul: los elementos del menú en fila y separados */
+ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------- Botones ---------- */
+button {
+    background-color: #7A2E1D;
+    color: #FFF8EC;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 8px 8px 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ---------- Tablas ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+}
+
+th {
+    background-color: #7A2E1D;
+    color: #FFF8EC;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #C9A66B;
+}
+
+/* ---------- Mapa ---------- */
+iframe {
+    max-width: 100%;
+}

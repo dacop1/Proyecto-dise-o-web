@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor con historia</title>
+
+    <!-- 1) Hoja externa principal (sin title: se aplica siempre) -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- 2) Estilos internos: solo para la página de inicio.
+         Van DESPUÉS de la hoja externa, así que redefinen sus reglas. -->
+    <style>
+        /* Redefine el h1 de estilos.css (40px) */
+        h1 {
+            font-size: 48px;
+        }
+
+        /* Redefine el color del h2 de estilos.css (#7A2E1D) */
+        h2 {
+            color: #A4452C;
+        }
+
+        /* Redefine el tamaño de p de estilos.css (16px) */
+        p {
+            font-size: 18px;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- 3) Hoja alternativa: va DESPUÉS del <style> para poder
+         sobrescribirlo cuando el usuario la activa desde el navegador -->
+    <link rel="alternate stylesheet" href="estilos-oscuro.css" title="Tema oscuro">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Estilo directo: tamaño de fuente y margen del nombre -->
+            <h3 style="font-size: 26px; margin: 0 0 8px 0;">Sabor con historia.</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#historia">Nuestra Historia</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a>Reservas</a></li>
+                <li><a>ES | EN</a></li>
+                <li><button>Reservar mesa</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Estilo directo: color de fondo, color de texto, alineación y tamaño -->
+        <p style="background-color: #E8B87A; color: #231A14; text-align: center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; padding: 5px;">Prado del Rey · Cádiz</p>
+        <h1>Tradición que se saborea</h1>
+        <!-- Estilo directo: redefine el tamaño de p del <style> interno (18px) -->
+        <p style="text-align: center; font-size: 21px;">Cocina andaluza de siempre, hecha con producto de la tierra, en el histórico Pósito de 
+            Labradores. Un lugar con memoria donde sentarse despacio.</p>
+        <p style="text-align: center;">
+            <button>Descubrir la carta</button>
+            <button>Reservar mesa</button>
+        </p>
+        <article>
+            <section>
+                <p>NUESTRA COCINA</p>
+                <h2>Sabores de nuestra tierra</h2>
+                <a href="carta.html">Ver la carta completa</a>
+            </section>
+            <section>
+                <p>NUESTRA HISTORIA</p>
+                <h2 id="historia">Un edificio con memoria</h2>
+                <p>
+                    Los pósitos fueron graneros públicos donde los labradores guardaban el 
+                    grano para asegurar el sustento del pueblo. Hoy, el Pósito de Labradores de Prado del Rey 
+                    vuelve a ser un lugar de encuentro, ahora alrededor de la mesa.
+                </p>
+            </section>
+            <section>
+                <p>ENCUÉNTRANOS</p>
+                <h2>Siempre cerca de ti</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399.41050232334203!2d-5.557036892830873!3d36.787740159739464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d1283fb7f2bff%3A0xf426037abf0cd875!2s11660%20Prado%20del%20Rey%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1794409449391!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </section>
+            <section>
+                <p>SIEMPRE DISPONIBLES</p>
+                <!-- Estilo directo: redefine el color del h2 (externa y interna) -->
+                <h2 style="color: #B8602F; text-align: center;">Horario</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <!-- Estilo directo: texto del pie centrado -->
+    <footer style="text-align: center;">
+        <p>Reservas</p>
+        <h2>Tu próxima historia empieza en nuestra mesa</h2>
+        <button>Haz tu reserva</button><br><br>
+        <a>¿Prefieres llamar? +34 956 000 000</a>
+        <p><b>Sabor con historia</b></p>
+        <p>Restaurante-bar en el Pósito de Labradores.</p>
+        <p>
+            <b>Visítanos</b><br>Calle Fuente, 14<br>Prado del Rey, Cádiz<br>+34 956 000 000
+            <br>hola@saborconhistoria.es
+        </p>
+
+        <p><b>Enlaces</b></p>
+        <a href="carta.html">Carta</a><br>
+        <a>Reservas</a><br>
+        <a href="index.html#historia">Nuestra historia</a><br>
+        
+        <p><b>Síguenos</b></p>
+        <a>Instagram</a><br>
+        <a>Facebook</a><br>
+        <hr>
+        <p style="font-size: 14px;">&copy; 2026 Sabor con historia. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

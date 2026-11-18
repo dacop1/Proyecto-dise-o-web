@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor con historia</title>
+    <title>Carta | Sabor con historia</title>
 </head>
 <body>
     <header>
         <nav>
             <h3>Sabor con historia.</h3>
             <ul>
-                <li><a>Inicio</a></li>
-                <li><a>Nuestra Historia</a></li>
-                <li><a>Carta</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#historia">Nuestra Historia</a></li>
+                <li><a href="carta.html" aria-current="page">Carta</a></li>
                 <li><a>Reservas</a></li>
                 <li><a>ES | EN</a></li>
                 <button>Reservar mesa</button>
@@ -21,101 +21,164 @@
     </header>
 
     <main>
-        <p>Cocina de Prado del Rey</p>
-        <h1>Nuestra carta</h1>
-        <p>Sabores de nuestra tierra, elaborados para compartir.</p>
-        <img src="" alt="Imagen mesa">
-        <br>
-        <button>Toda la carta</button>
-        <button>Para compartir</button>
-        <button>Entrantes</button>
-        <button>Platos principales</button>
-        <button>Postres</button>
-        <button>Bebidas</button>
-        <br>
-        <h4>Tipo de plato</h4>
-        <select>
-            <option>Todos</option>
-            <option>Para compartir</option>
-            <option>Entrantes</option>
-            <option>Platos principales</option>
-            <option>Postres</option>
-            <option>Bebidas</option>
-        </select>
-        <label>
-            <input type="checkbox">
-            Vegetariano
-        </label>
-        <label>
-            <input type="checkbox">
-            Sin gluten
-        </label>
-        <h6>La disponibilidad de alérgenos y de opciones vegetarianas se indica en cada plato. Consulta siempre a nuestro equipo.</h6>
+        <!-- Migas de pan -->
+        <nav aria-label="Migas de pan">
+            <a href="index.html">Inicio</a> &gt; <span>Carta</span>
+        </nav>
+
+        <!-- Cabecera de la página -->
+        <p>NUESTRA COCINA</p>
+        <h1>La carta</h1>
+        <p>Cocina andaluza de siempre, hecha con producto de la tierra. 
+            Platos para compartir, guisos de cuchara y postres caseros.</p>
+
+        <!-- Índice de categorías -->
+        <nav aria-label="Categorías de la carta">
+            <ul>
+                <li><a href="#entrantes">Entrantes</a></li>
+                <li><a href="#carnes">Carnes</a></li>
+                <li><a href="#pescados">Pescados</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+            </ul>
+        </nav>
 
         <article>
-            <section>
-                <h2>Para compartir</h2>
-                <h5>Para pedir al centro de la mesa.</h5>
-                <img src="" alt="Comida">
-                <h3>Croquetas caseras</h3>
-                <h4>Cremosas por dentro, doradas por fuera, como manda la casa.</h4>
-                <p>Precio: 9,50€</p>
-                <br>
-                <img src="" alt="Comida">
-                <h3>Croquetas caseras</h3>
-                <h4>Cremosas por dentro, doradas por fuera, como manda la casa.</h4>
-                <p>Precio: 9,50€</p>
-                <br>
-                <img src="" alt="Comida">
-                <h3>Tortillitas de camarones</h3>
-                <h4>Finas y crujientes, fritas al momento.</h4>
-                <p>Precio: 9,50€</p>
-                <br>
+            <section id="entrantes">
+                <h2>Entrantes</h2>
+                <ul>
+                    <li>
+                        <h3>Tortillitas de camarones</h3>
+                        <p>Crujientes, con harina de garbanzo y cebolleta.</p>
+                        <p><strong>8,50 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Ensaladilla del Pósito</h3>
+                        <p>Receta casera con atún y mayonesa suave.</p>
+                        <p><strong>6,00 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Tabla de ibéricos</h3>
+                        <p>Jamón, lomo y queso curado con picos de pan.</p>
+                        <p><strong>14,00 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Berenjenas con miel de caña</h3>
+                        <p>Fritas al momento.</p>
+                        <p><strong>7,00 €</strong></p>
+                    </li>
+                </ul>
             </section>
-            <section>
-                <p>NUESTRA HISTORIA</p>
-                <h1>Un edificio con memoria</h1>
-                <p>
-                    Los pósitos fueron graneros públicos donde los labradores guardaban el 
-                    grano para asegurar el sustento del pueblo. Hoy, el Pósito de Labradores de Prado del Rey 
-                    vuelve a ser un lugar de encuentro, ahora alrededor de la mesa.
-                </p>
+
+            <section id="carnes">
+                <h2>Carnes</h2>
+                <ul>
+                    <li>
+                        <h3>Carrillada ibérica al vino tinto</h3>
+                        <p>Cocinada a fuego lento con puré de patata.</p>
+                        <p><strong>14,50 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Solomillo al whisky</h3>
+                        <p>Con ajitos y patatas panaderas.</p>
+                        <p><strong>13,00 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Presa ibérica a la plancha</h3>
+                        <p>Con pimientos asados.</p>
+                        <p><strong>15,00 €</strong></p>
+                    </li>
+                </ul>
             </section>
-            <section>
-                <p>ENCUENTRANOS</p>
-                <h1>Siempre cerca de ti</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399.41050232334203!2d-5.557036892830873!3d36.787740159739464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d1283fb7f2bff%3A0xf426037abf0cd875!2s11660%20Prado%20del%20Rey%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1794409449391!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <section id="pescados">
+                <h2>Pescados</h2>
+                <ul>
+                    <li>
+                        <h3>Pescaíto frito variado</h3>
+                        <p>Pescado fresco del día, frito al estilo gaditano.</p>
+                        <p><strong>13,50 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Atún encebollado</h3>
+                        <p>Guiso tradicional con cebolla pochada.</p>
+                        <p><strong>14,00 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Calamares a la andaluza</h3>
+                        <p>Con limón y salsa alioli.</p>
+                        <p><strong>11,50 €</strong></p>
+                    </li>
+                </ul>
             </section>
-            <section>
-                <p>SIEMPRE DISPONIBLES</p>
-                <h1>Horario</h1>
+
+            <section id="postres">
+                <h2>Postres</h2>
+                <ul>
+                    <li>
+                        <h3>Tarta de queso casera</h3>
+                        <p>Con mermelada de frutos rojos.</p>
+                        <p><strong>5,00 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Tocino de cielo</h3>
+                        <p>Dulce tradicional de yema.</p>
+                        <p><strong>4,50 €</strong></p>
+                    </li>
+                    <li>
+                        <h3>Helado artesano</h3>
+                        <p>Consulta los sabores del día.</p>
+                        <p><strong>4,00 €</strong></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="bebidas">
+                <h2>Bebidas</h2>
                 <table border="1">
                     <thead>
-                        <th>Lunes</th>
-                        <th>Martes</th>
-                        <th>Miércoles</th>
-                        <th>Jueves</th>
-                        <th>Viernes</th>
-                        <th>Sabado</th>
+                        <tr>
+                            <th>Bebida</th>
+                            <th>Precio</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>13:00 - 00:00</td>
-                            <td>13:00 - 00:00</td>
-                            <td>13:00 - 00:00</td>
-                            <td>13:00 - 00:00</td>
-                            <td>13:00 - 00:00</td>
-                            <td>13:00 - 00:00</td>
+                            <td>Caña de cerveza</td>
+                            <td>1,80 €</td>
+                        </tr>
+                        <tr>
+                            <td>Copa de vino de la tierra</td>
+                            <td>3,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Refrescos</td>
+                            <td>2,20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Agua</td>
+                            <td>1,50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Café</td>
+                            <td>1,50 €</td>
                         </tr>
                     </tbody>
                 </table>
+            </section>
+
+            <!-- Información sobre alérgenos -->
+            <section>
+                <h2>Alérgenos</h2>
+                <p>Si tienes alguna alergia o intolerancia, avísanos antes de pedir. 
+                    Te ayudaremos a elegir con tranquilidad.</p>
             </section>
         </article>
     </main>
 
     <footer>
         <p>Reservas</p>
-        <h1>Tu próxima historia empieza en nuestra mesa</h1>
+        <h2>Tu próxima historia empieza en nuestra mesa</h2>
         <button>Haz tu reserva</button><br><br>
         <a>¿Prefieres llamar? +34 956 000 000</a>
         <p><b>Sabor con historia</b></p>
@@ -126,15 +189,15 @@
         </p>
 
         <p><b>Enlaces</b></p>
-        <a>Carta</a><br>
+        <a href="carta.html">Carta</a><br>
         <a>Reservas</a><br>
-        <a>Nuestra historia</a><br>
-        
-        <p><b>Siguenos</b></p>
+        <a href="index.html#historia">Nuestra historia</a><br>
+
+        <p><b>Síguenos</b></p>
         <a>Instagram</a><br>
         <a>Facebook</a><br>
         <hr>
-        <p>&copy 2026 Sabor con historia. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Sabor con historia. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
