@@ -1,32 +1,42 @@
 /* ==========================================================
    Sabor con historia - Hoja de estilos externa principal
-   Propuesta 1: tema CLARO (tonos cálidos, crema y terracota)
+   Tema CLARO basado en la "Guía de Estilo y Prototipo Final" (Figma)
+   Paleta 60-30-10: crema (60%), verde (30%), terracota (10%)
    Unidades en px; Flexbox solo en los menús (nav y ul)
    ========================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap");
+
 /* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Inter, Roboto, "Open Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #FBF5E9;
-    color: #3B2A20;
+    background-color: #F7F0DC;   /* crema: color dominante */
+    color: #2E1C12;              /* marrón oscuro: texto principal */
     margin: 0;
 }
 
 /* ---------- Estructura ---------- */
-header,
-footer {
-    background-color: #EFE3CC;
-    padding: 16px 32px;
-}
-
 header {
-    border-bottom: 3px solid #7A2E1D;
+    background-color: #F7F0DC;
+    padding: 16px 32px;
+    border-bottom: 1px solid #D6C7A0;
 }
 
 footer {
-    border-top: 3px solid #7A2E1D;
+    background-color: #304523;   /* verde: color secundario */
+    color: #F7F0DC;
+    padding: 48px 32px 24px 32px;
+    border-top: 4px solid #BD4A22;
     margin-top: 48px;
 }
 
@@ -40,20 +50,30 @@ main {
 h1 {
     font-size: 40px;
     line-height: 1.2;
-    color: #7A2E1D;
+    color: #2E1C12;
     text-align: center;
 }
 
 h2 {
-    font-size: 28px;
-    color: #7A2E1D;
-    border-bottom: 2px solid #C9A66B;
+    font-size: 32px;
+    line-height: 1.25;
+    color: #304523;
+    border-bottom: 2px solid #E1BD6E;
     padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 20px;
-    color: #5A3A25;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #2E1C12;
+}
+
+/* Marca "Sabor con historia." en la cabecera: tipografía expresiva */
+header h3 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #304523;
 }
 
 /* ---------- Texto y enlaces ---------- */
@@ -62,19 +82,41 @@ p {
     margin: 8px 0 16px 0;
 }
 
+/* Etiqueta superior de la página (NUESTRA COCINA, etc.) */
+main > p:first-of-type,
+section > p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #963617;
+}
+
 a {
-    color: #7A2E1D;
+    color: #963617;              /* terracota oscuro (7,30:1 sobre blanco) */
     font-weight: bold;
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 strong {
     font-weight: bold;
+    color: #963617;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #C9A66B;
+    border-top: 1px solid #E1BD6E;
+}
+
+/* Foco visible (anillo de 3 px de la guía) */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #BD4A22;
+    outline-offset: 2px;
 }
 
 /* ---------- Menús con Flexbox ---------- */
@@ -83,6 +125,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -90,22 +133,97 @@ nav {
 ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* ---------- Botones ---------- */
+/* Enlaces del menú principal: subrayado terracota al pasar/estar activo */
+header nav a {
+    color: #2E1C12;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 0;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+    text-decoration: none;
+    border-bottom-color: #BD4A22;
+}
+
+/* Migas de pan (carta.html) */
+main > nav[aria-label="Migas de pan"] {
+    justify-content: flex-start;
+    font-size: 14px;
+    margin: 16px 0 8px 0;
+}
+
+/* Índice de categorías de la carta: botones tipo "pastilla" */
+main > nav[aria-label="Categorías de la carta"] {
+    justify-content: center;
+    margin: 16px 0 24px 0;
+}
+
+main nav ul {
+    justify-content: center;
+    gap: 10px;
+}
+
+main nav ul a {
+    display: inline-block;
+    border: 1px solid #304523;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 14px;
+    color: #304523;
+}
+
+main nav ul a:hover {
+    background-color: #304523;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* ---------- Botones (Primary de la guía) ---------- */
 button {
-    background-color: #7A2E1D;
-    color: #FFF8EC;
+    background-color: #BD4A22;   /* terracota: acento / CTA (10%) */
+    color: #FFFFFF;              /* 5,04:1 sobre terracota */
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
+    min-height: 44px;            /* altura táctil mínima */
     padding: 10px 20px;
     margin: 8px 8px 8px 0;
+    font-family: inherit;
     font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #963617;   /* terracota oscuro (7,30:1) */
+}
+
+button:disabled {
+    background-color: #ECDFBF;
+    color: #7A6A58;
+    cursor: not-allowed;
+}
+
+/* ---------- Tarjetas de plato (carta.html) ---------- */
+article article {
+    background-color: #FFFAF0;
+    border: 1px solid #D6C7A0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+}
+
+article article p {
+    margin: 4px 0 8px 0;
 }
 
 /* ---------- Tablas ---------- */
@@ -116,17 +234,86 @@ table {
 }
 
 th {
-    background-color: #7A2E1D;
-    color: #FFF8EC;
+    background-color: #304523;
+    color: #FFFFFF;              /* 10,49:1 sobre verde */
     padding: 10px;
 }
 
 td {
     padding: 10px;
-    border: 1px solid #C9A66B;
+    background-color: #FFFAF0;
+    border: 1px solid #D6C7A0;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #ECDFBF;
 }
 
 /* ---------- Mapa ---------- */
 iframe {
     max-width: 100%;
+    border-radius: 4px;
+}
+
+/* ---------- Pie de página (sobre verde) ---------- */
+footer h2 {
+    color: #F7F0DC;
+    border-bottom: none;
+    max-width: 640px;
+    margin: 8px auto 16px auto;
+}
+
+footer > p:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E1BD6E;
+}
+
+footer p {
+    color: #F7F0DC;
+}
+
+footer a {
+    color: #F7F0DC;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #E1BD6E;
+}
+
+footer a:focus-visible,
+footer button:focus-visible {
+    outline-color: #E1BD6E;
+}
+
+footer hr {
+    border-top-color: #6F7942;
+    margin: 24px 0 16px 0;
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 640px) {
+    header,
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    th,
+    td {
+        padding: 6px 4px;
+        font-size: 13px;
+    }
 }

@@ -1,0 +1,152 @@
+/* ==========================================================
+   Sabor con historia - Hoja ALTERNATIVA: tema OSCURO
+   Se enlaza con rel="alternate stylesheet" y title="Tema oscuro".
+   Va DESPUÉS de estilos.css y del <style> interno, así que solo
+   redefine colores (el tamaño, el espaciado y el Flexbox se
+   heredan de estilos.css). Mantiene la identidad de la guía:
+   terracota para las acciones, verde como secundario y crema
+   como color de texto.
+   Cada selector repite el de estilos.css para ganar por orden.
+   ========================================================== */
+
+/* ---------- Base ---------- */
+body {
+    background-color: #1E140E;   /* marrón muy oscuro */
+    color: #F7F0DC;              /* crema (≈15:1 sobre el fondo) */
+}
+
+/* ---------- Estructura ---------- */
+header {
+    background-color: #2B1E15;
+    border-bottom-color: #5A4535;
+}
+
+footer {
+    background-color: #182611;   /* verde muy oscuro */
+    color: #F7F0DC;
+    border-top-color: #BD4A22;
+}
+
+/* ---------- Títulos ---------- */
+h1 {
+    color: #F7F0DC;
+}
+
+/* !important: el h2 de Horario lleva color en línea (style="...") */
+h2 {
+    color: #E1BD6E !important;
+    border-bottom-color: #5A4535;
+}
+
+h3 {
+    color: #F7F0DC;
+}
+
+header h3 {
+    color: #E1BD6E;
+}
+
+/* ---------- Texto y enlaces ---------- */
+main > p:first-of-type,
+section > p:first-child {
+    color: #E8B87A;
+}
+
+a {
+    color: #E1BD6E;              /* dorado de la paleta (≈10:1) */
+}
+
+strong {
+    color: #E1BD6E;
+}
+
+hr {
+    border-top-color: #5A4535;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline-color: #E1BD6E;
+}
+
+/* ---------- Menús ---------- */
+header nav a {
+    color: #F7F0DC;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+    border-bottom-color: #E1BD6E;
+}
+
+main nav ul a {
+    border-color: #E1BD6E;
+    color: #E1BD6E;
+}
+
+main nav ul a:hover {
+    background-color: #E1BD6E;
+    color: #1E140E;
+}
+
+/* ---------- Botones ---------- */
+/* La terracota se mantiene: blanco sobre #BD4A22 = 5,04:1 (AA) */
+button {
+    background-color: #BD4A22;
+    color: #FFFFFF;
+}
+
+button:hover {
+    background-color: #D2592F;
+}
+
+button:disabled {
+    background-color: #3A2B20;
+    color: #A89880;
+}
+
+/* ---------- Tarjetas de plato ---------- */
+article article {
+    background-color: #2B1E15;
+    border-color: #5A4535;
+}
+
+/* ---------- Tablas ---------- */
+th {
+    background-color: #304523;
+    color: #FFFFFF;
+}
+
+td {
+    background-color: #2B1E15;
+    border-color: #5A4535;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #34261B;
+}
+
+/* ---------- Pie de página ---------- */
+footer h2 {
+    color: #F7F0DC !important;
+}
+
+footer > p:first-child {
+    color: #E1BD6E;
+}
+
+footer p {
+    color: #F7F0DC;
+}
+
+footer a {
+    color: #F7F0DC;
+}
+
+footer a:hover {
+    color: #E1BD6E;
+}
+
+footer hr {
+    border-top-color: #4A5A32;
+}
