@@ -9,10 +9,23 @@
    Cada selector repite el de estilos.css para ganar por orden.
    ========================================================== */
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+h1,h2,h3 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+}
+
+
+
 /* ---------- Base ---------- */
 body {
-    background-color: #1E140E;   /* marrón muy oscuro */
-    color: #F7F0DC;              /* crema (≈15:1 sobre el fondo) */
+    background-color: #1E140E;
+    /* marrón muy oscuro */
+    color: #F7F0DC;
+    /* crema (≈15:1 sobre el fondo) */
 }
 
 /* ---------- Estructura ---------- */
@@ -22,7 +35,8 @@ header {
 }
 
 footer {
-    background-color: #182611;   /* verde muy oscuro */
+    background-color: #182611;
+    /* verde muy oscuro */
     color: #F7F0DC;
     border-top-color: #BD4A22;
 }
@@ -47,13 +61,14 @@ header h3 {
 }
 
 /* ---------- Texto y enlaces ---------- */
-main > p:first-of-type,
-section > p:first-child {
+main>p:first-of-type,
+section>p:first-child {
     color: #E8B87A;
 }
 
 a {
-    color: #E1BD6E;              /* dorado de la paleta (≈10:1) */
+    color: #E1BD6E;
+    /* dorado de la paleta (≈10:1) */
 }
 
 strong {
@@ -131,7 +146,7 @@ footer h2 {
     color: #F7F0DC !important;
 }
 
-footer > p:first-child {
+footer>p:first-child {
     color: #E1BD6E;
 }
 

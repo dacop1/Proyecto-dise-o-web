@@ -5,6 +5,15 @@
    Unidades en px; Flexbox solo en los menús (nav y ul)
    ========================================================== */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+h1,h2,h3 {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 /* ---------- Base ---------- */
@@ -20,8 +29,10 @@ body {
     font-family: Inter, Roboto, "Open Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #F7F0DC;   /* crema: color dominante */
-    color: #2E1C12;              /* marrón oscuro: texto principal */
+    background-color: #F7F0DC;
+    /* crema: color dominante */
+    color: #2E1C12;
+    /* marrón oscuro: texto principal */
     margin: 0;
 }
 
@@ -33,7 +44,8 @@ header {
 }
 
 footer {
-    background-color: #304523;   /* verde: color secundario */
+    background-color: #304523;
+    /* verde: color secundario */
     color: #F7F0DC;
     padding: 48px 32px 24px 32px;
     border-top: 4px solid #BD4A22;
@@ -83,8 +95,8 @@ p {
 }
 
 /* Etiqueta superior de la página (NUESTRA COCINA, etc.) */
-main > p:first-of-type,
-section > p:first-child {
+main>p:first-of-type,
+section>p:first-child {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -93,7 +105,8 @@ section > p:first-child {
 }
 
 a {
-    color: #963617;              /* terracota oscuro (7,30:1 sobre blanco) */
+    color: #963617;
+    /* terracota oscuro (7,30:1 sobre blanco) */
     font-weight: bold;
     text-decoration: none;
 }
@@ -156,14 +169,14 @@ header nav a[aria-current="page"] {
 }
 
 /* Migas de pan (carta.html) */
-main > nav[aria-label="Migas de pan"] {
+main>nav[aria-label="Migas de pan"] {
     justify-content: flex-start;
     font-size: 14px;
     margin: 16px 0 8px 0;
 }
 
 /* Índice de categorías de la carta: botones tipo "pastilla" */
-main > nav[aria-label="Categorías de la carta"] {
+main>nav[aria-label="Categorías de la carta"] {
     justify-content: center;
     margin: 16px 0 24px 0;
 }
@@ -190,11 +203,14 @@ main nav ul a:hover {
 
 /* ---------- Botones (Primary de la guía) ---------- */
 button {
-    background-color: #BD4A22;   /* terracota: acento / CTA (10%) */
-    color: #FFFFFF;              /* 5,04:1 sobre terracota */
+    background-color: #BD4A22;
+    /* terracota: acento / CTA (10%) */
+    color: #FFFFFF;
+    /* 5,04:1 sobre terracota */
     border: none;
     border-radius: 4px;
-    min-height: 44px;            /* altura táctil mínima */
+    min-height: 44px;
+    /* altura táctil mínima */
     padding: 10px 20px;
     margin: 8px 8px 8px 0;
     font-family: inherit;
@@ -204,7 +220,8 @@ button {
 }
 
 button:hover {
-    background-color: #963617;   /* terracota oscuro (7,30:1) */
+    background-color: #963617;
+    /* terracota oscuro (7,30:1) */
 }
 
 button:disabled {
@@ -235,7 +252,8 @@ table {
 
 th {
     background-color: #304523;
-    color: #FFFFFF;              /* 10,49:1 sobre verde */
+    color: #FFFFFF;
+    /* 10,49:1 sobre verde */
     padding: 10px;
 }
 
@@ -263,7 +281,7 @@ footer h2 {
     margin: 8px auto 16px auto;
 }
 
-footer > p:first-child {
+footer>p:first-child {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -297,6 +315,7 @@ footer hr {
 
 /* ---------- Pantallas pequeñas ---------- */
 @media (max-width: 640px) {
+
     header,
     footer {
         padding-left: 16px;
