@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra historia · Sabor con historia</title>
+
+    <!-- 1) Hoja externa principal (se aplica siempre) -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- 2) Estilos internos: solo para la página de historia.
+         Van DESPUÉS de la hoja externa, así que redefinen sus reglas. -->
+    <style>
+        h1 {
+            font-size: 44px;
+        }
+
+        h2 {
+            color: #A4452C;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        blockquote {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 10px 20px;
+            border-left: 4px solid #B8602F;
+            font-style: italic;
+        }
+
+        ol {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
+
+    <!-- 3) Hoja alternativa (tema oscuro) -->
+    <link rel="alternate stylesheet" href="estilos-oscuro.css" title="Tema oscuro">
+</head>
+<body>
+    <header>
+        <nav>
+            <h3 style="font-size: 26px; margin: 0 0 8px 0;">Sabor con historia.</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Nuestra Historia</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a>Reservas</a></li>
+                <li><a>ES | EN</a></li>
+                <li><button>Reservar mesa</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p style="background-color: #E8B87A; color: #231A14; text-align: center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; padding: 5px;">Prado del Rey · Cádiz</p>
+        <h1>Un edificio con memoria</h1>
+        <p style="text-align: center; font-size: 21px;">Antes de ser mesa, fue granero. Esta es la historia del Pósito de Labradores y de cómo hoy vuelve a reunir al pueblo.</p>
+
+        <article>
+            <section>
+                <p>QUÉ ES UN PÓSITO</p>
+                <h2>El granero de todos</h2>
+                <p>
+                    Los pósitos fueron graneros públicos donde los labradores guardaban el
+                    grano. Con él se aseguraba el sustento del pueblo en los años de mala
+                    cosecha y se prestaba semilla para la siembra siguiente.
+                </p>
+                <blockquote>
+                    Guardar hoy para que nadie pase hambre mañana.
+                </blockquote>
+            </section>
+
+            <section>
+                <p>EL EDIFICIO</p>
+                <h2>El Pósito de Labradores de Prado del Rey</h2>
+                <p>
+                    El Pósito de Labradores es una de las construcciones con más memoria de
+                    Prado del Rey. Sus muros guardaron durante generaciones el grano de
+                    quienes trabajaban la tierra de la sierra.
+                </p>
+                <!-- Imagen: sustituir por una foto real del edificio -->
+                <!-- <img src="img/posito.jpg" alt="Fachada del Pósito de Labradores" width="600"> -->
+            </section>
+
+            <section>
+                <p>LÍNEA DEL TIEMPO</p>
+                <h2>De granero a mesa</h2>
+                <ol>
+                    <li><b>Origen:</b> el pueblo construye el pósito para guardar el grano común.</li>
+                    <li><b>Siglos de uso:</b> los labradores lo usan para almacenar cosecha y pedir semilla prestada.</li>
+                    <li><b>Cambio de uso:</b> el edificio deja de servir como granero.</li>
+                    <li><b>Hoy:</b> se recupera como restaurante-bar, un lugar de encuentro alrededor de la mesa.</li>
+                </ol>
+                <!-- Completa cada paso con las fechas reales cuando las tengas -->
+            </section>
+
+            <section>
+                <p>NUESTRA COCINA</p>
+                <h2>Producto de la tierra, como siempre</h2>
+                <p>
+                    Seguimos fieles al espíritu del pósito: cocina andaluza de siempre, hecha
+                    con producto de la tierra y pensada para sentarse despacio.
+                </p>
+                <p style="text-align: center;">
+                    <a href="carta.html">Ver la carta completa</a>
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer style="text-align: center;">
+        <p>Reservas</p>
+        <h2>Tu próxima historia empieza en nuestra mesa</h2>
+        <button>Haz tu reserva</button><br><br>
+        <a>¿Prefieres llamar? +34 956 000 000</a>
+        <p><b>Sabor con historia</b></p>
+        <p>Restaurante-bar en el Pósito de Labradores.</p>
+        <p>
+            <b>Visítanos</b><br>Calle Fuente, 14<br>Prado del Rey, Cádiz<br>+34 956 000 000
+            <br>hola@saborconhistoria.es
+        </p>
+
+        <p><b>Enlaces</b></p>
+        <a href="carta.html">Carta</a><br>
+        <a>Reservas</a><br>
+        <a href="historia.html">Nuestra historia</a><br>
+
+        <p><b>Síguenos</b></p>
+        <a>Instagram</a><br>
+        <a>Facebook</a><br>
+        <hr>
+        <p style="font-size: 14px;">&copy; 2026 Sabor con historia. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
