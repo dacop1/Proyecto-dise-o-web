@@ -51,6 +51,7 @@
                 <li><a href="carta.html">Carta</a></li>
                 <li><a>Reservas</a></li>
                 <li>ES | <a href="index-en.html">EN</a></li>
+                <li><button onclick="cambiarTema(this)">Modo oscuro</button></li>
                 <li><button>Reservar mesa</button></li>
             </ul>
         </nav>
@@ -144,5 +145,19 @@
         <hr>
         <p style="font-size: 14px;">&copy; 2026 Sabor con historia. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Activa o desactiva la hoja alternativa "Tema oscuro"
+        function cambiarTema(boton) {
+            var hoja = document.querySelector('link[title="Tema oscuro"]');
+            if (boton.textContent === "Modo oscuro") {
+                hoja.disabled = false;
+                boton.textContent = "Modo claro";
+            } else {
+                hoja.disabled = true;
+                boton.textContent = "Modo oscuro";
+            }
+        }
+    </script>
 </body>
 </html>
