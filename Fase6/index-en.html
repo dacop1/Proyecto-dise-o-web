@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor con historia</title>
+
+    <!-- 1) Main external stylesheet (always applied) -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- 2) Internal styles: only for the home page.
+         They come AFTER the external sheet, so they redefine its rules. -->
+    <style>
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            color: #A4452C;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        table {
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- 3) Alternate stylesheet -->
+    <link rel="alternate stylesheet" href="estilos-oscuro.css" title="Tema oscuro">
+</head>
+<body>
+    <header>
+        <nav>
+            <h3 style="font-size: 26px; margin: 0 0 8px 0;">Sabor con historia.</h3>
+            <ul>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="historia-en.html">Our Story</a></li>
+                <li><a href="carta-en.html">Menu</a></li>
+                <li><a>Reservations</a></li>
+                <li><a href="index.html">ES</a> | EN</li>
+                <li><button>Book a table</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p style="background-color: #E8B87A; color: #231A14; text-align: center; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; padding: 5px;">Prado del Rey · Cádiz</p>
+        <h1>Tradition you can taste</h1>
+        <p style="text-align: center; font-size: 21px;">Traditional Andalusian cooking, made with local produce, in the historic Pósito de
+            Labradores. A place with memory, made for sitting down slowly.</p>
+        <p style="text-align: center;">
+            <button>Discover the menu</button>
+            <button>Book a table</button>
+        </p>
+        <article>
+            <section>
+                <p>OUR KITCHEN</p>
+                <h2>Flavours of our land</h2>
+                <a href="carta-en.html">See the full menu</a>
+            </section>
+            <section>
+                <p>OUR STORY</p>
+                <h2 id="historia">A building with memory</h2>
+                <p>
+                    Pósitos were public granaries where farmers stored grain to guarantee
+                    the village's food supply. Today, the Pósito de Labradores in Prado del Rey
+                    is a meeting place once again, now around the table.
+                </p>
+                <p style="text-align: center;">
+                    <a href="historia-en.html">Read our story</a>
+                </p>
+            </section>
+            <section>
+                <p>FIND US</p>
+                <h2>Always close to you</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399.41050232334203!2d-5.557036892830873!3d36.787740159739464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d1283fb7f2bff%3A0xf426037abf0cd875!2s11660%20Prado%20del%20Rey%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1794409449391!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </section>
+            <section>
+                <p>ALWAYS OPEN</p>
+                <h2 style="color: #B8602F; text-align: center;">Opening hours</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                            <td>13:00 - 00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <footer style="text-align: center;">
+        <p>Reservations</p>
+        <h2>Your next story starts at our table</h2>
+        <button>Make your reservation</button><br><br>
+        <a>Prefer to call? +34 956 000 000</a>
+        <p><b>Sabor con historia</b></p>
+        <p>Restaurant-bar in the Pósito de Labradores.</p>
+        <p>
+            <b>Visit us</b><br>Calle Fuente, 14<br>Prado del Rey, Cádiz<br>+34 956 000 000
+            <br>hola@saborconhistoria.es
+        </p>
+
+        <p><b>Links</b></p>
+        <a href="carta-en.html">Menu</a><br>
+        <a>Reservations</a><br>
+        <a href="historia-en.html">Our story</a><br>
+
+        <p><b>Follow us</b></p>
+        <a>Instagram</a><br>
+        <a>Facebook</a><br>
+        <hr>
+        <p style="font-size: 14px;">&copy; 2026 Sabor con historia. All rights reserved.</p>
+    </footer>
+</body>
+</html>
